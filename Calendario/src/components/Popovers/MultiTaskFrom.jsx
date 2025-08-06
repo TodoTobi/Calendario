@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 
+codex/add-category-and-setcategory-in-usecalendar
+export default function MultiTaskForm({ showMultiForm, setShowMultiForm, addTask, days, category }) {
+=======
 export default function MultiTaskForm({ showMultiForm, setShowMultiForm, addTask, days }) {
+main
   const [title, setTitle] = useState("");
   const [selectedDays, setSelectedDays] = useState([]);
 
@@ -11,7 +15,11 @@ export default function MultiTaskForm({ showMultiForm, setShowMultiForm, addTask
   };
 
   const confirm = () => {
+codex/add-category-and-setcategory-in-usecalendar
+    selectedDays.forEach(day => addTask(day, category, title || "Nueva tarea"));
+=======
     selectedDays.forEach(day => addTask(day, "tarea", title || "Nueva tarea"));
+main
     setShowMultiForm(false);
   };
 

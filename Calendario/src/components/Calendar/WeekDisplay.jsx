@@ -1,4 +1,7 @@
 import React from "react";
+codex/add-category-and-setcategory-in-usecalendar
+import { monthNames } from "../../utils/dateUtils";
+=======
 codex/remove-usecontext-and-adjust-props
 import { monthNames } from "../../utils/dateUtils";
 =======
@@ -6,6 +9,7 @@ codex/move-utility-files-to-src/utils
 import { monthNames } from "../../utils/dateUtils";
 import { monthNames } from "../utils/dateUtils";
  main
+main
 main
 
 export default function WeekDisplay({ currentWeek }) {
