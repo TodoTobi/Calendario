@@ -1,42 +1,11 @@
 import React from "react";
 import MiniCalendar from "./MiniCalendar";
 import CategorySelector from "./CategorySelector";
-codex/add-category-and-setcategory-in-usecalendar
-import { exportWeekPdf } from "../../utils/pdfUtils";
-
-export default function Sidebar({
-  month, setShowMonthPopover,
-  year, setShowYearPopover,
-  monthNames, days,
-  setDarkMode, darkMode,
-  currentWeek, tasksByDay,
-  setShowMultiForm,
-  category, setCategory
-}) {
-=======
-codex/remove-usecontext-and-adjust-props
-import { exportWeekPdf } from "../../utils/pdfUtils";
-
-export default function Sidebar({
-  month,
-  setShowMonthPopover,
-  year,
-  setShowYearPopover,
-  monthNames,
-  days,
-  setDarkMode,
-  darkMode,
-  currentWeek,
-  setCurrentWeek,
-  tasksByDay,
-  setShowMultiForm
-}) {
-=======
-codex/move-utility-files-to-src/utils
+ codex/rename-multitaskfrom.jsx-to-multitaskform.jsx
 import { exportWeekPdf } from "../../utils/pdfUtils";
 =======
 import { exportWeekPdf } from "../utils/pdfUtils";
-main
+ main
 
 export default function Sidebar({
   month, setShowMonthPopover,
@@ -46,8 +15,6 @@ export default function Sidebar({
   currentWeek, tasksByDay,
   setShowMultiForm
 }) {
- main
-main
   return (
     <aside className="sidebar">
       <div className="calendar-nav">
@@ -59,32 +26,14 @@ main
         </button>
       </div>
 
-codex/add-category-and-setcategory-in-usecalendar
       <MiniCalendar month={month} year={year} days={days} />
-=======
-codex/remove-usecontext-and-adjust-props
-      <MiniCalendar
-        month={month}
-        year={year}
-        days={days}
-        currentWeek={currentWeek}
-        setCurrentWeek={setCurrentWeek}
-      />
-=======
-      <MiniCalendar month={month} year={year} days={days} />
-main
- main
 
       <button id="toggleDarkMode" onClick={() => setDarkMode(!darkMode)}>
         {darkMode ? "☀️ Modo claro" : "🌙 Modo noche"}
       </button>
 
       <h3>✏️ Acciones</h3>
-codex/add-category-and-setcategory-in-usecalendar
-      <CategorySelector category={category} setCategory={setCategory} />
-=======
       <CategorySelector />
-main
 
       <button onClick={() => setShowMultiForm(true)}>➕ Crear en varios días</button>
       <button onClick={() => exportWeekPdf(currentWeek, tasksByDay)}>📄 Exportar PDF</button>
