@@ -1,13 +1,7 @@
-import React, { useContext } from "react";
-codex/rename-multitaskfrom.jsx-to-multitaskform.jsx
-import { getWeekKey } from "../../utils/dateUtils";
-=======
+import React from "react";
 import { getWeekKey } from "../utils/dateUtils";
- main
-import CalendarContext from "../../hooks/useCalendar";
 
-export default function MiniCalendar({ month, year, days }) {
-  const { currentWeek, setCurrentWeek } = useContext(CalendarContext);
+export default function MiniCalendar({ month, year, days, currentWeek, setCurrentWeek }) {
 
   const di = new Date(year, month, 0).getDate();
   const sd = new Date(year, month - 1, 1).getDay();

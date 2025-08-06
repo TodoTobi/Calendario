@@ -1,18 +1,14 @@
 import React from "react";
 import MiniCalendar from "./MiniCalendar";
 import CategorySelector from "./CategorySelector";
- codex/rename-multitaskfrom.jsx-to-multitaskform.jsx
-import { exportWeekPdf } from "../../utils/pdfUtils";
-=======
 import { exportWeekPdf } from "../utils/pdfUtils";
- main
 
 export default function Sidebar({
   month, setShowMonthPopover,
   year, setShowYearPopover,
   monthNames, days,
   setDarkMode, darkMode,
-  currentWeek, tasksByDay,
+  currentWeek, setCurrentWeek, tasksByDay,
   setShowMultiForm
 }) {
   return (
@@ -26,7 +22,13 @@ export default function Sidebar({
         </button>
       </div>
 
-      <MiniCalendar month={month} year={year} days={days} />
+      <MiniCalendar
+        month={month}
+        year={year}
+        days={days}
+        currentWeek={currentWeek}
+        setCurrentWeek={setCurrentWeek}
+      />
 
       <button id="toggleDarkMode" onClick={() => setDarkMode(!darkMode)}>
         {darkMode ? "☀️ Modo claro" : "🌙 Modo noche"}
