@@ -1,4 +1,7 @@
+codex/verify-migration-logic-in-app.js
+=======
 codex/add-dark-mode-class-toggle
+ main
 import React, { useState } from "react";
 
 export default function CategorySelector() {
@@ -13,6 +16,8 @@ export default function CategorySelector() {
     </select>
   );
 }
+ codex/verify-migration-logic-in-app.js
+=======
 =======
 codex/add-category-and-setcategory-in-usecalendar
 import React from "react";
@@ -42,5 +47,6 @@ export default function CategorySelector() {
     </select>
   );
 }
+main
 main
 main

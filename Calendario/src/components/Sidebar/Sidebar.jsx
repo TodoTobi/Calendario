@@ -1,9 +1,12 @@
 import React from "react";
 import MiniCalendar from "./MiniCalendar";
 import CategorySelector from "./CategorySelector";
+ codex/verify-migration-logic-in-app.js
+=======
 codex/add-dark-mode-class-toggle
 =======
 codex/add-category-and-setcategory-in-usecalendar
+ main
  main
 import { exportWeekPdf } from "../../utils/pdfUtils";
 
@@ -13,6 +16,10 @@ export default function Sidebar({
   monthNames, days,
   setDarkMode, darkMode,
   currentWeek, tasksByDay,
+codex/verify-migration-logic-in-app.js
+  setShowMultiForm
+}) {
+=======
 codex/add-dark-mode-class-toggle
   setShowMultiForm
 }) {
@@ -56,6 +63,7 @@ export default function Sidebar({
  main
 main
  main
+main
   return (
     <aside className="sidebar">
       <div className="calendar-nav">
@@ -67,6 +75,9 @@ main
         </button>
       </div>
 
+codex/verify-migration-logic-in-app.js
+      <MiniCalendar month={month} year={year} days={days} />
+=======
  codex/add-dark-mode-class-toggle
       <MiniCalendar month={month} year={year} days={days} />
 =======
@@ -86,12 +97,16 @@ codex/remove-usecontext-and-adjust-props
 main
  main
  main
+ main
 
       <button id="toggleDarkMode" onClick={() => setDarkMode(!darkMode)}>
         {darkMode ? "☀️ Modo claro" : "🌙 Modo noche"}
       </button>
 
       <h3>✏️ Acciones</h3>
+ codex/verify-migration-logic-in-app.js
+      <CategorySelector />
+=======
  codex/add-dark-mode-class-toggle
       <CategorySelector />
 =======
@@ -101,6 +116,7 @@ codex/add-category-and-setcategory-in-usecalendar
       <CategorySelector />
 main
  main
+main
 
       <button onClick={() => setShowMultiForm(true)}>➕ Crear en varios días</button>
       <button onClick={() => exportWeekPdf(currentWeek, tasksByDay)}>📄 Exportar PDF</button>

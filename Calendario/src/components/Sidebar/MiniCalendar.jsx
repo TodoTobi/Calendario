@@ -1,3 +1,7 @@
+codex/verify-migration-logic-in-app.js
+import React, { useContext } from "react";
+import { getWeekKey } from "../../utils/dateUtils";
+=======
 codex/add-dark-mode-class-toggle
 import React, { useContext } from "react";
 import { getWeekKey } from "../../utils/dateUtils";
@@ -26,15 +30,19 @@ import { getWeekKey } from "../utils/dateUtils";
 main
 main
 main
+ main
 import CalendarContext from "../../hooks/useCalendar";
 
 export default function MiniCalendar({ month, year, days }) {
   const { currentWeek, setCurrentWeek } = useContext(CalendarContext);
+ codex/verify-migration-logic-in-app.js
+=======
 codex/add-dark-mode-class-toggle
 =======
 codex/add-category-and-setcategory-in-usecalendar
 =======
  main
+main
 main
 main
 
@@ -44,6 +52,11 @@ main
 
   return (
     <div id="mini-calendar">
+codex/verify-migration-logic-in-app.js
+      {["L","M","Mi","J","V","S","D"].map((h, i) => (
+        <div key={i} className="day-header">{h}</div>
+      ))}
+=======
  codex/add-dark-mode-class-toggle
       {["L","M","Mi","J","V","S","D"].map((h, i) => (
         <div key={i} className="day-header">{h}</div>
@@ -62,6 +75,7 @@ codex/remove-usecontext-and-adjust-props
       {["L","M","Mi","J","V","S","D"].map((h, i) => (
         <div key={i} className="day-header">{h}</div>
       ))}
+main
 main
 main
 main

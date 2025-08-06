@@ -1,4 +1,7 @@
 import { useState } from "react";
+ codex/verify-migration-logic-in-app.js
+import { getWeekKey } from "../utils/dateUtils";
+=======
 codex/add-dark-mode-class-toggle
 import { getWeekKey } from "../utils/dateUtils";
 =======
@@ -16,10 +19,17 @@ import { getWeekKey } from "../components/utils/dateUtils";
 main
  main
 main
+ main
 
 export default function useCalendar() {
   const [month, setMonth] = useState(7);
   const [year, setYear] = useState(2025);
+codex/verify-migration-logic-in-app.js
+  const [currentWeek, setCurrentWeek] = useState(getWeekKey(2025, 7, 1));
+  const [tasksByDay, setTasksByDay] = useState({});
+  const [darkMode, setDarkMode] = useState(false);
+  const [selectedTask, setSelectedTask] = useState(null);
+=======
 codex/add-dark-mode-class-toggle
 =======
 codex/add-category-and-setcategory-in-usecalendar
@@ -36,6 +46,7 @@ main
   const [selectedTask, setSelectedTask] = useState(null);
  codex/add-dark-mode-class-toggle
 =======
+main
 main
 main
   const [showMonthPopover, setShowMonthPopover] = useState(false);
@@ -76,6 +87,8 @@ main
     darkMode, setDarkMode,
     selectedTask, setSelectedTask,
     showMonthPopover, setShowMonthPopover,
+codex/verify-migration-logic-in-app.js
+=======
  codex/add-dark-mode-class-toggle
 =======
 codex/add-category-and-setcategory-in-usecalendar
@@ -87,12 +100,16 @@ codex/add-category-and-setcategory-in-usecalendar
 }
 =======
  main
+main
     showYearPopover, setShowYearPopover,
     showTaskMenu, setShowTaskMenu,
     showMultiForm, setShowMultiForm
   };
 }
+codex/verify-migration-logic-in-app.js
+=======
  codex/add-dark-mode-class-toggle
 =======
 main
+ main
  main
