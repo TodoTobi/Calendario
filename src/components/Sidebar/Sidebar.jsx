@@ -1,11 +1,7 @@
 import React from "react";
 import MiniCalendar from "./MiniCalendar";
 import CategorySelector from "./CategorySelector";
-codex/move-utility-files-to-src/utils
-import { exportWeekPdf } from "../../utils/pdfUtils";
-=======
 import { exportWeekPdf } from "../utils/pdfUtils";
-main
 
 export default function Sidebar({
   month, setShowMonthPopover,
