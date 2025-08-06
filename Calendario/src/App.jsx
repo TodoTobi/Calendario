@@ -21,6 +21,8 @@ export default function App() {
         <h1>Mi Calendario Semanal</h1>
         <WeekDisplay currentWeek={calendar.currentWeek} />
         <Calendar {...calendar} days={days} />
+codex/remove-usecontext-and-adjust-props
+=======
 import React, { useEffect } from "react";
 import Sidebar from "./components/Sidebar/Sidebar";
 import Calendar from "./components/Calendar/Calendar";
@@ -52,6 +54,7 @@ export default function App() {
         <h1>Mi Calendario Semanal</h1>
         <WeekDisplay currentWeek={calendar.currentWeek} />
         <Calendar {...calendar} days={days} />
+ main
       </main>
 
       {/* Popovers */}

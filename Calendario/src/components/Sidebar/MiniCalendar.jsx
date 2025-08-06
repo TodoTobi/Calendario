@@ -1,3 +1,15 @@
+codex/remove-usecontext-and-adjust-props
+import React from "react";
+import { getWeekKey } from "../../utils/dateUtils";
+
+export default function MiniCalendar({
+  month,
+  year,
+  days,
+  currentWeek,
+  setCurrentWeek
+}) {
+=======
 import React, { useContext } from "react";
 codex/move-utility-files-to-src/utils
 import { getWeekKey } from "../../utils/dateUtils";
@@ -8,6 +20,7 @@ import CalendarContext from "../../hooks/useCalendar";
 
 export default function MiniCalendar({ month, year, days }) {
   const { currentWeek, setCurrentWeek } = useContext(CalendarContext);
+ main
 
   const di = new Date(year, month, 0).getDate();
   const sd = new Date(year, month - 1, 1).getDay();
@@ -15,9 +28,15 @@ export default function MiniCalendar({ month, year, days }) {
 
   return (
     <div id="mini-calendar">
+codex/remove-usecontext-and-adjust-props
+      {days.map((d, i) => (
+        <div key={i} className="day-header">{d.slice(0, 2)}</div>
+      ))}
+=======
       {["L","M","Mi","J","V","S","D"].map((h, i) => (
         <div key={i} className="day-header">{h}</div>
       ))}
+main
       {Array.from({ length: bl }).map((_, i) => (
         <div key={`b${i}`} />
       ))}

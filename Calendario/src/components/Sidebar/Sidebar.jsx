@@ -1,6 +1,24 @@
 import React from "react";
 import MiniCalendar from "./MiniCalendar";
 import CategorySelector from "./CategorySelector";
+codex/remove-usecontext-and-adjust-props
+import { exportWeekPdf } from "../../utils/pdfUtils";
+
+export default function Sidebar({
+  month,
+  setShowMonthPopover,
+  year,
+  setShowYearPopover,
+  monthNames,
+  days,
+  setDarkMode,
+  darkMode,
+  currentWeek,
+  setCurrentWeek,
+  tasksByDay,
+  setShowMultiForm
+}) {
+=======
 codex/move-utility-files-to-src/utils
 import { exportWeekPdf } from "../../utils/pdfUtils";
 =======
@@ -15,6 +33,7 @@ export default function Sidebar({
   currentWeek, tasksByDay,
   setShowMultiForm
 }) {
+ main
   return (
     <aside className="sidebar">
       <div className="calendar-nav">
@@ -26,7 +45,17 @@ export default function Sidebar({
         </button>
       </div>
 
+codex/remove-usecontext-and-adjust-props
+      <MiniCalendar
+        month={month}
+        year={year}
+        days={days}
+        currentWeek={currentWeek}
+        setCurrentWeek={setCurrentWeek}
+      />
+=======
       <MiniCalendar month={month} year={year} days={days} />
+main
 
       <button id="toggleDarkMode" onClick={() => setDarkMode(!darkMode)}>
         {darkMode ? "☀️ Modo claro" : "🌙 Modo noche"}
