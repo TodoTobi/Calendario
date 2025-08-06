@@ -1,4 +1,7 @@
 import { useState } from "react";
+codex/add-dark-mode-class-toggle
+import { getWeekKey } from "../utils/dateUtils";
+=======
 codex/add-category-and-setcategory-in-usecalendar
 import { getWeekKey } from "../utils/dateUtils";
 =======
@@ -12,10 +15,13 @@ import { getWeekKey } from "../components/utils/dateUtils";
  main
 main
  main
+main
 
 export default function useCalendar() {
   const [month, setMonth] = useState(7);
   const [year, setYear] = useState(2025);
+codex/add-dark-mode-class-toggle
+=======
 codex/add-category-and-setcategory-in-usecalendar
   const [currentWeek, setCurrentWeek] = useState(getWeekKey(2025, 7, 1));
   const [tasksByDay, setTasksByDay] = useState({});
@@ -23,10 +29,14 @@ codex/add-category-and-setcategory-in-usecalendar
   const [category, setCategory] = useState("tarea");
   const [selectedTask, setSelectedTask] = useState(null);
 =======
+main
   const [currentWeek, setCurrentWeek] = useState(getWeekKey(2025, 7, 1));
   const [tasksByDay, setTasksByDay] = useState({});
   const [darkMode, setDarkMode] = useState(false);
   const [selectedTask, setSelectedTask] = useState(null);
+ codex/add-dark-mode-class-toggle
+=======
+main
 main
   const [showMonthPopover, setShowMonthPopover] = useState(false);
   const [showYearPopover, setShowYearPopover] = useState(false);
@@ -66,6 +76,8 @@ main
     darkMode, setDarkMode,
     selectedTask, setSelectedTask,
     showMonthPopover, setShowMonthPopover,
+ codex/add-dark-mode-class-toggle
+=======
 codex/add-category-and-setcategory-in-usecalendar
     showYearPopover, setShowYearPopover,
     showTaskMenu, setShowTaskMenu,
@@ -74,9 +86,13 @@ codex/add-category-and-setcategory-in-usecalendar
   };
 }
 =======
+ main
     showYearPopover, setShowYearPopover,
     showTaskMenu, setShowTaskMenu,
     showMultiForm, setShowMultiForm
   };
 }
+ codex/add-dark-mode-class-toggle
+=======
 main
+ main
